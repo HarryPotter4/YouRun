@@ -31,6 +31,26 @@ namespace YouRun
 
         }
 
+        private void button_Back_To_Goals_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_generate_Workout_Plan_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button_back_To_Body_Data_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         
     }
 }

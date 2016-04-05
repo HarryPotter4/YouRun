@@ -8,10 +8,10 @@
         Title="YouRun" Height="720" Width="1024" ResizeMode="NoResize">
     <Grid Margin="0,0,-0.4,0.4">
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="690" VerticalAlignment="Top" Width="1018">
-            <TabItem Header="1. Select goals" Margin="0,0,-161.6,-34.8" FontSize="18" FontWeight="Bold">
-                <Grid Background="White" Margin="0,33,0,0.2">
+            <TabItem Header="1. Select goals" Margin="-2,0,-159.4,-34.8" FontSize="18" FontWeight="Bold" IsEnabled="False" BorderBrush="White" Foreground="Black" Focusable="False" IsSelected="True" Background="White">
+                <Grid x:Name="grid_select_Goals" Background="White" Margin="0,33,0,0.2">
                     <Label x:Name="label" Content="Select gols" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" FontSize="24"/>
-                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="411,182,0,0" VerticalAlignment="Top" Width="181" IsSynchronizedWithCurrentItem="True">
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="411,182,0,0" VerticalAlignment="Top" Width="236" IsSynchronizedWithCurrentItem="True">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -24,8 +24,8 @@
                         <ComboBoxItem Content="5 km Lauf" FontWeight="Normal"/>
                         <ComboBoxItem Content="Fitnesstraining" FontWeight="Normal"/>
                     </ComboBox>
-                    <DatePicker x:Name="expiredDate" HorizontalAlignment="Left" Margin="411,235,0,0" VerticalAlignment="Top" Width="181" IsTodayHighlighted="False" SelectedDateFormat="Long" FirstDayOfWeek="Monday" Text="DD/MM/YYYY"/>
-                    <TextBox x:Name="aspiredTime" HorizontalAlignment="Left" Height="23" Margin="411,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="181" Text="HH:mm">
+                    <DatePicker x:Name="expiredDate" HorizontalAlignment="Left" Margin="411,235,0,0" VerticalAlignment="Top" Width="236" IsTodayHighlighted="False" SelectedDateFormat="Long" FirstDayOfWeek="Monday" Text="DD/MM/YYYY"/>
+                    <TextBox x:Name="aspiredTime" HorizontalAlignment="Left" Height="23" Margin="411,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Text="HH:mm">
                         <TextBox.BindingGroup>
                             <BindingGroup Name="Runningtime"/>
                         </TextBox.BindingGroup>
@@ -37,7 +37,13 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="2. Current body data" Margin="163.4,0,-331,-34.8" FontSize="18" FontWeight="Bold">
+            <TabItem x:Name="grid_Body_Data" Header="2. Current body data" Margin="163.4,0,-331,-34.8" FontSize="18" FontWeight="Bold" IsEnabled="False" BorderBrush="White">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
                 <Grid Background="White" Margin="0,33,0,0.2">
                     <Label x:Name="label2" Content="Select goals" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" FontSize="24"/>
                     <Label x:Name="label3" Content="Select gender:" HorizontalAlignment="Left" Margin="172,182,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
@@ -63,13 +69,13 @@
                         <ComboBoxItem Content="Level 5" FontWeight="Normal"/>
                     </ComboBox>
                     <Button x:Name="button_To_Individual" Content="Next" HorizontalAlignment="Left" Margin="842,477,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-                    <Button x:Name="button_Back_To_Goals" Content="Back" HorizontalAlignment="Left" Margin="737,477,0,0" VerticalAlignment="Top" Width="75"/>
+                    <Button x:Name="button_Back_To_Goals" Content="Back" HorizontalAlignment="Left" Margin="737,477,0,0" VerticalAlignment="Top" Width="75" Click="button_Back_To_Goals_Click"/>
 
 
                 </Grid>
 
             </TabItem>
-            <TabItem Header="3. Individual time management" Margin="331.2,0,-393.4,-34.8" FontSize="18" FontWeight="Bold">
+            <TabItem Header="3. Individual time management" Margin="331.2,0,-393.4,-34.8" FontSize="18" FontWeight="Bold" IsEnabled="False">
                 <Grid Background="White" Margin="0,33,0,0.2">
                     <CheckBox x:Name="checkBox_Monday" Content="Monday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,177,0,0" Background="White" FontWeight="Normal"/>
                     <CheckBox x:Name="checkBox_Sunday" Content="Sunday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,345,0,0" Background="White" FontWeight="Normal"/>
@@ -79,8 +85,8 @@
                     <CheckBox x:Name="checkBox_Wednesday" Content="Wednesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,233,0,0" Background="White" FontWeight="Normal"/>
                     <CheckBox x:Name="checkBox_Thuesday" Content="Thuesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,205,0,0" Background="White" FontWeight="Normal"/>
                     <Label x:Name="label1" Content="Individual time management" HorizontalAlignment="Left" Margin="137,132,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="button_generate_Workout_Plan" Content="Generate workout plan" HorizontalAlignment="Left" Margin="762,488,0,0" VerticalAlignment="Top" Width="215" Height="33"/>
-                    <Button x:Name="button_back_To_Body_Data" Content="Back" HorizontalAlignment="Left" Margin="652,490,0,0" VerticalAlignment="Top" Width="75" Height="31"/>
+                    <Button x:Name="button_generate_Workout_Plan" Content="Generate workout plan" HorizontalAlignment="Left" Margin="762,488,0,0" VerticalAlignment="Top" Width="215" Height="33" Click="button_generate_Workout_Plan_Click"/>
+                    <Button x:Name="button_back_To_Body_Data" Content="Back" HorizontalAlignment="Left" Margin="652,490,0,0" VerticalAlignment="Top" Width="75" Height="31" Click="button_back_To_Body_Data_Click"/>
 
 
 
