@@ -21,6 +21,9 @@ namespace YouRun
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +31,7 @@ namespace YouRun
 
         private void button_To_Current_Body_Data_Click(object sender, RoutedEventArgs e)
         {
-
+            //  Grid.
         }
 
         private void button_Back_To_Goals_Click(object sender, RoutedEventArgs e)
@@ -51,6 +54,12 @@ namespace YouRun
 
         }
 
-        
+        private void button_To_Current_Body_Data_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+       
+
     }
-}
+} 
