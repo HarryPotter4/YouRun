@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YouRun_GUI"
         mc:Ignorable="d"
-        Title="YouRun" Height="350" Width="525">
+        Title="{Binding WindowTitle}" Height="350" Width="525" WindowState="Maximized" MinWidth="525" MinHeight="350" WindowStartupLocation="CenterScreen">
     <Grid>
-        
-        
+        <WrapPanel Height="150" VerticalAlignment="Top" Margin="0,0,-1.6,0" Orientation="Horizontal" Grid.ColumnSpan="3">
+            <Button x:Name="btn_traininsPlan" Visibility="Visible" Margin="0,0,0,-0.2">Trainingsplan</Button>
+            <Button x:Name="btn_chart" Visibility="Visible" Margin="0,0,0,-0.2">Chart</Button>
+            <Button x:Name="btn_documentView" Content="DocumentView" Margin="0,0,0,-0.2" Visibility="Visible"/>
+        </WrapPanel>
+
     </Grid>
 </Window>
