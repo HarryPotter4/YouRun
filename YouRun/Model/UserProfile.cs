@@ -11,6 +11,7 @@ namespace YouRun.Model
         private String aspiredGoal;
         private DateTime expiredDate;
         private String aspiredTime;
-        // private  
+
+        
     }
 }
