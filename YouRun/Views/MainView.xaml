@@ -25,7 +25,7 @@
                         <ComboBoxItem Content="Fitnesstraining" FontWeight="Normal"/>
                     </ComboBox>
                     <DatePicker x:Name="expiredDate" HorizontalAlignment="Left" Margin="411,235,0,0" VerticalAlignment="Top" Width="236" IsTodayHighlighted="False" SelectedDateFormat="Long" FirstDayOfWeek="Monday" Text="DD/MM/YYYY"/>
-                    <TextBox x:Name="aspiredTime" HorizontalAlignment="Left" Height="23" Margin="411,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Text="HH:mm">
+                    <TextBox x:Name="AspiredTime" HorizontalAlignment="Left" Height="23" Margin="411,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Text="hh:mm">
                         <TextBox.BindingGroup>
                             <BindingGroup Name="Runningtime"/>
                         </TextBox.BindingGroup>

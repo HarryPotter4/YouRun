@@ -19,6 +19,8 @@ namespace YouRun.ViewModels
         private bool _CurrentBodyData_isSelected;
         private bool _Individual_Time_isSelected;
 
+        private string _AspiredTime;
+
         public MainViewModel()
         {
             TabItem_SelectGoals_isSelected = true;
@@ -101,7 +103,6 @@ namespace YouRun.ViewModels
                 NotifyOfPropertyChange(() => TabItem_SelectGoals_isSelected);
             }
         }
-
         public bool CurrentBodyData_isSelected
         {
             get
@@ -115,7 +116,6 @@ namespace YouRun.ViewModels
                 NotifyOfPropertyChange(() => CurrentBodyData_isSelected);
             }
         }
-
         public bool Individual_Time_isSelected
         {
             get
@@ -127,6 +127,21 @@ namespace YouRun.ViewModels
             {
                 _Individual_Time_isSelected = value;
                 NotifyOfPropertyChange(() => Individual_Time_isSelected);
+            }
+        }
+
+        public string AspiredTime
+        {
+            get
+            {
+                return _AspiredTime;
+            }
+
+            set
+            {
+                
+                _AspiredTime = value;
+                NotifyOfPropertyChange(() => AspiredTime);
             }
         }
 
