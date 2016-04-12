@@ -103,7 +103,6 @@ namespace YouRun.ViewModels
                 NotifyOfPropertyChange(() => TabItem_SelectGoals_isSelected);
             }
         }
-
         public bool CurrentBodyData_isSelected
         {
             get
@@ -117,7 +116,6 @@ namespace YouRun.ViewModels
                 NotifyOfPropertyChange(() => CurrentBodyData_isSelected);
             }
         }
-
         public bool Individual_Time_isSelected
         {
             get
