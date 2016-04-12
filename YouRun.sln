@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouRun", "YouRun\YouRun.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouRun_GUI", "YouRun_GUI\YouRun_GUI.csproj", "{2B715DDF-5471-430C-B102-4E91AFEAFFF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFGenerator", "PDFGenerator\PDFGenerator.csproj", "{8A8AF26D-4140-4796-983C-FB2F3A26346C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2B715DDF-5471-430C-B102-4E91AFEAFFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B715DDF-5471-430C-B102-4E91AFEAFFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B715DDF-5471-430C-B102-4E91AFEAFFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A8AF26D-4140-4796-983C-FB2F3A26346C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8AF26D-4140-4796-983C-FB2F3A26346C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8AF26D-4140-4796-983C-FB2F3A26346C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8AF26D-4140-4796-983C-FB2F3A26346C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
