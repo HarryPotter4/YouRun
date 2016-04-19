@@ -8,6 +8,11 @@
         Title="{Binding WindowTitle}" Height="350" Width="525" WindowState="Maximized" MinWidth="525" MinHeight="350" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="0,0,0.4,0" Background="#FFFFD6D6" Height="51" VerticalAlignment="Top">
+            <Button Margin="0,0,0,0.2" Width="55" BorderBrush="#FFE2E2E2" Foreground="{x:Null}" x:Name="Btn_ProfileView">
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/folder.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
             <Button Margin="0,0,0,0.2" Width="55" BorderBrush="#FFE2E2E2" Foreground="{x:Null}" x:Name="Btn_StopWatch">
                 <Button.Background>
                     <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/watchstopp.png" Stretch="Uniform"/>
@@ -27,7 +32,7 @@
         
         <!-- <ListBox Margin="2,54,3.4,2.8" x:Name="ListView_Content" SelectionMode="Multiple" Background="White" RenderTransformOrigin="0.5,0.5" BorderBrush="White" />
         -->
-        <ContentControl x:Name="Content_Control" Margin="0,52,0.4,-0.2" Background="#FFFFA0A0" Foreground="#FFD36666" BorderBrush="#FFB72B2B" OpacityMask="White"/>
+        <ContentControl x:Name="ActiveItem" Margin="0,52,0.4,-0.2" Background="#FFFFA0A0" Foreground="#FFD36666" BorderBrush="#FFB72B2B" OpacityMask="White"/>
 
     </Grid>
 </Window>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace YouRun_GUI.ViewModels
 {
-    class MainViewModel : Screen
+    class MainViewModel : Conductor<Screen>
     {
         private StopWatchViewModel stopWatchViewModel;
         private ChartViewModel chartViewModel;
@@ -31,22 +31,27 @@ namespace YouRun_GUI.ViewModels
        
         public void Btn_StopWatch()
         {
-            stopWatchViewModel = new StopWatchViewModel();
-            ListView_Content = new BindableCollection<object>(){ stopWatchViewModel  };
+            ActivateItem(new StopWatchViewModel());
             Debug.Write("Das ist die Stopwatch");
-
-
         }
+
         public void Btn_ChartDiagram()
         {
-            chartViewModel = new ChartViewModel();
-            ListView_Content = new BindableCollection<object>() { chartViewModel };      
-                  
-            Debug.Write("Das ist das Chartdiagramm");
+            ActivateItem(new ChartViewModel());                              
+            Debug.Write("Das ist das Chartdiagramm");                           
         }
+
+        
+
         public void Btn_PDFDocument()
         {
+            ActivateItem(new DocumentViewModel());
             Debug.Write("Das ist die PDFDOCUment");
+        }
+
+        public void Btn_ProfileView()
+        {
+            ActivateItem(new ProfileViewModel());
         }
 
         private BindableCollection<object> _listView_Content;

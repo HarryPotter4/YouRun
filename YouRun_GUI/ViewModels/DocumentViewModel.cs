@@ -4,13 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Controls;
 
 namespace YouRun_GUI.ViewModels
 {
-    class ChartViewModel : Screen
+    class DocumentViewModel : Screen
     {
-        
-
     }
 }
