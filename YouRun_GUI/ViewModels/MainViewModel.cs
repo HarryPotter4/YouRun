@@ -12,7 +12,12 @@ namespace YouRun_GUI.ViewModels
     {
         private StopWatchViewModel stopWatchViewModel;
         private ChartViewModel chartViewModel;
-        
+
+        public MainViewModel()
+        {
+            ActivateItem(new ProfileViewModel());
+        }
+
         private string _WindowTitle;
         public string WindowTitle
         {
@@ -34,13 +39,11 @@ namespace YouRun_GUI.ViewModels
             ActivateItem(new StopWatchViewModel());
             Debug.Write("Das ist die Stopwatch");
         }
-
         public void Btn_ChartDiagram()
         {
             ActivateItem(new ChartViewModel());                              
             Debug.Write("Das ist das Chartdiagramm");                           
         }
-
         
 
         public void Btn_PDFDocument()
@@ -48,7 +51,6 @@ namespace YouRun_GUI.ViewModels
             ActivateItem(new DocumentViewModel());
             Debug.Write("Das ist die PDFDOCUment");
         }
-
         public void Btn_ProfileView()
         {
             ActivateItem(new ProfileViewModel());

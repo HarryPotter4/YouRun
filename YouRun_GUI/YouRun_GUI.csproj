@@ -159,6 +159,18 @@
   <ItemGroup>
     <Resource Include="Pictures\folder.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Logo_YouRun.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\youRun.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YouRun\YouRun.csproj">
+      <Project>{c7f927c0-9d5f-42ab-8aca-4cf75b3fe6a0}</Project>
+      <Name>YouRun</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
