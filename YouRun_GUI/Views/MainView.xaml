@@ -24,7 +24,10 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <ListBox Margin="0,52,514.4,-0.2" x:Name="listView_Content" SelectionMode="Single" />
+        
+        <!-- <ListBox Margin="2,54,3.4,2.8" x:Name="ListView_Content" SelectionMode="Multiple" Background="White" RenderTransformOrigin="0.5,0.5" BorderBrush="White" />
+        -->
+        <ContentControl x:Name="Content_Control" Margin="0,52,0.4,-0.2" Background="#FFFFA0A0" Foreground="#FFD36666" BorderBrush="#FFB72B2B" OpacityMask="White"/>
 
     </Grid>
 </Window>

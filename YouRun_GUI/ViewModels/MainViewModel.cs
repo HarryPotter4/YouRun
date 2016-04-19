@@ -11,9 +11,8 @@ namespace YouRun_GUI.ViewModels
     class MainViewModel : Screen
     {
         private StopWatchViewModel stopWatchViewModel;
-
-
-
+        private ChartViewModel chartViewModel;
+        
         private string _WindowTitle;
         public string WindowTitle
         {
@@ -25,9 +24,29 @@ namespace YouRun_GUI.ViewModels
             set
             {
                 _WindowTitle = value;
-                InitialWindows();
                 NotifyOfPropertyChange(() => WindowTitle);
             }
+        }
+
+       
+        public void Btn_StopWatch()
+        {
+            stopWatchViewModel = new StopWatchViewModel();
+            ListView_Content = new BindableCollection<object>(){ stopWatchViewModel  };
+            Debug.Write("Das ist die Stopwatch");
+
+
+        }
+        public void Btn_ChartDiagram()
+        {
+            chartViewModel = new ChartViewModel();
+            ListView_Content = new BindableCollection<object>() { chartViewModel };      
+                  
+            Debug.Write("Das ist das Chartdiagramm");
+        }
+        public void Btn_PDFDocument()
+        {
+            Debug.Write("Das ist die PDFDOCUment");
         }
 
         private BindableCollection<object> _listView_Content;
@@ -45,25 +64,7 @@ namespace YouRun_GUI.ViewModels
             }
         }
 
-        public void Btn_StopWatch()
-        {
-            stopWatchViewModel = new StopWatchViewModel();
 
-
-
-            ListView_Content = new BindableCollection<object>(){ stopWatchViewModel  };
-            Debug.Write("Das ist die Stopwatch");
-        }
-        public void Btn_ChartDiagram()
-        {
-            Debug.Write("Das ist das Chartdiagramm");
-        }
-        public void Btn_PDFDocument()
-        {
-            Debug.Write("Das ist die PDFDOCUment");
-        }
     }
-
-    
 
 }

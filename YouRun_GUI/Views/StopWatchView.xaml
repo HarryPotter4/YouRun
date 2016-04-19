@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:YouRun_GUI.Views"
              mc:Ignorable="d" 
              d:DesignHeight="519.6" d:DesignWidth="903.6">
-    <Grid Background="#FF728B5B" >
+    <Grid Background="#FF728B5B" x:Name="DataGrid_StopWatch">
 
 
 

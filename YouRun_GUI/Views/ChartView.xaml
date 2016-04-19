@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:YouRun_GUI.Views"
              mc:Ignorable="d" 
              d:DesignHeight="269.268" d:DesignWidth="451.463">
-    <Grid OpacityMask="#FFBD5050" Background="#FF89B900">
+    <Grid OpacityMask="#FFBD5050" Background="#FF89B900" x:Name="DataGrid_Chart">
 
     </Grid>
 </UserControl>
