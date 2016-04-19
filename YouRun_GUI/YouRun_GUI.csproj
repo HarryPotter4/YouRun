@@ -73,8 +73,9 @@
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\TrainingsPlan.xaml.cs">
-      <DependentUpon>TrainingsPlan.xaml</DependentUpon>
+    <Compile Include="ViewModels\StopWatchViewModel.cs" />
+    <Compile Include="Views\StopWatchView.xaml.cs">
+      <DependentUpon>StopWatchView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -88,7 +89,7 @@
       <DependentUpon>MainView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\TrainingsPlan.xaml">
+    <Page Include="Views\StopWatchView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -123,6 +124,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\charts-combo-icon.png" />
+    <Resource Include="Pictures\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\watchstopp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

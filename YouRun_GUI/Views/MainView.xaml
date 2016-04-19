@@ -7,19 +7,24 @@
         mc:Ignorable="d"
         Title="{Binding WindowTitle}" Height="350" Width="525" WindowState="Maximized" MinWidth="525" MinHeight="350" WindowStartupLocation="CenterScreen">
     <Grid>
-        <WrapPanel Height="150" VerticalAlignment="Top" Margin="0,0,-1.6,0" Orientation="Horizontal" Grid.ColumnSpan="3">
-            <Button x:Name="btn_traininsPlan" Visibility="Visible" Margin="0,0,0,-0.2">Trainingsplan</Button>
-            <Button x:Name="btn_chart" Visibility="Visible" Margin="0,0,0,-0.2">Chart</Button>
-            <Button x:Name="btn_documentView" Content="DocumentView" Margin="0,0,0,-0.2" Visibility="Visible"/>
-        </WrapPanel>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="100" Margin="-1,145,0,0" VerticalAlignment="Top">
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-        </Menu>
-        <DocumentViewer x:Name="documentViewer" HorizontalAlignment="Left" Height="1" Margin="87,187,0,0" VerticalAlignment="Top" Width="1"/>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0.4,0" Background="#FFFFD6D6" Height="51" VerticalAlignment="Top">
+            <Button Margin="0,0,0,0.2" Width="55" BorderBrush="#FFE2E2E2" Foreground="{x:Null}" x:Name="Btn_StopWatch">
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/watchstopp.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="0,0,0,0.2" Width="58" x:Name="Btn_ChartDiagram" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/charts-combo-icon.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="0,0,0,0.2" Width="54" x:Name="Btn_PDFDocument" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/document.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <ListBox Margin="0,52,514.4,-0.2" x:Name="listView_Content" SelectionMode="Single" />
 
     </Grid>
 </Window>

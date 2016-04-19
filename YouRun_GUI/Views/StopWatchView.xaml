@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="YouRun_GUI.Views.StopWatchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YouRun_GUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="488.4" d:DesignWidth="724.8">
+    <Grid Margin="0,0,-175,-36">
+        
+        
+        
+    </Grid>
+</UserControl>

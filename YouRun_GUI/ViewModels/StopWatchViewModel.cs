@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using IronPdf;
 
-namespace PDFGenerator
+namespace YouRun_GUI.ViewModels
 {
-    class Program
+    class StopWatchViewModel
     {
-        static void Main(string[] args)
-        {
-            
-        }
     }
 }

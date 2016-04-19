@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,11 +10,6 @@ namespace YouRun_GUI.ViewModels
 {
     class MainViewModel : Screen
     {
-        public MainViewModel()
-        {
-           // InitialWindows();
-        }
-
         private void InitialWindows()
         {
             int temp = (int) MenuWidth / 3;
@@ -22,65 +18,7 @@ namespace YouRun_GUI.ViewModels
             Btn_traingsPlan_Width = temp;
         }
 
-        private int _MenuWidth;
-        private int _Btn_traingsPlan_Width;
-        private int _Btn_chart_Width;
-        private int _Btn_documentView_Width;
         private string _WindowTitle;
-
-        public int MenuWidth
-        {
-            get
-            {
-                return _MenuWidth;
-            }
-
-            set
-            {
-                _MenuWidth = value;
-                NotifyOfPropertyChange(() => MenuWidth);
-            }
-        }
-        public int Btn_traingsPlan_Width
-        {
-            get
-            {
-                return _Btn_traingsPlan_Width;
-            }
-
-            set
-            {
-                _Btn_traingsPlan_Width = value;
-                NotifyOfPropertyChange(() => Btn_traingsPlan_Width);
-            }
-        }
-        public int Btn_chart_Width
-        {
-            get
-            {
-                return _Btn_chart_Width;
-            }
-
-            set
-            {
-                _Btn_chart_Width = value;
-                NotifyOfPropertyChange(() => Btn_chart_Width);
-            }
-        }
-        public int Btn_documentView_Width
-        {
-            get
-            {
-                return _Btn_documentView_Width;
-            }
-
-            set
-            {
-                _Btn_documentView_Width = value;
-                NotifyOfPropertyChange(() => Btn_documentView_Width);
-            }
-        }
-
         public string WindowTitle
         {
             get
@@ -96,17 +34,35 @@ namespace YouRun_GUI.ViewModels
             }
         }
 
-        public void btn_trainingsPlan()
+        private BindableCollection<StopWatchViewModel> _listView_Content;
+        public BindableCollection<StopWatchViewModel> ListView_Content
         {
-            InitialWindows();
-        }
-        public void btn_chart()
-        {
-            
-        }
-        public void btn_documentView()
-        {
+            get
+            {
+                return _listView_Content;
+            }
 
+            set
+            {
+                _listView_Content = value;
+                NotifyOfPropertyChange(() => ListView_Content);
+            }
+        }
+
+        public void Btn_StopWatch()
+        {
+            Debug.Write("Das ist die Stopwatch");
+        }
+        public void Btn_ChartDiagram()
+        {
+            Debug.Write("Das ist das Chartdiagramm");
+        }
+        public void Btn_PDFDocument()
+        {
+            Debug.Write("Das ist die PDFDOCUment");
         }
     }
+
+    
+
 }
