@@ -10,13 +10,9 @@ namespace YouRun_GUI.ViewModels
 {
     class MainViewModel : Screen
     {
-        private void InitialWindows()
-        {
-            int temp = (int) MenuWidth / 3;
-            Btn_documentView_Width = temp;
-            Btn_chart_Width = temp;
-            Btn_traingsPlan_Width = temp;
-        }
+        private StopWatchViewModel stopWatchViewModel;
+
+
 
         private string _WindowTitle;
         public string WindowTitle
@@ -34,8 +30,8 @@ namespace YouRun_GUI.ViewModels
             }
         }
 
-        private BindableCollection<StopWatchViewModel> _listView_Content;
-        public BindableCollection<StopWatchViewModel> ListView_Content
+        private BindableCollection<object> _listView_Content;
+        public BindableCollection<object> ListView_Content
         {
             get
             {
@@ -51,6 +47,11 @@ namespace YouRun_GUI.ViewModels
 
         public void Btn_StopWatch()
         {
+            stopWatchViewModel = new StopWatchViewModel();
+
+
+
+            ListView_Content = new BindableCollection<object>(){ stopWatchViewModel  };
             Debug.Write("Das ist die Stopwatch");
         }
         public void Btn_ChartDiagram()
