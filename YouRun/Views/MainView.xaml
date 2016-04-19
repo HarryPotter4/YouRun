@@ -10,7 +10,7 @@
         <TabControl x:Name="TabControl" HorizontalAlignment="Left" Height="690" VerticalAlignment="Top" Width="1018">
             <TabItem x:Name="TabItem_SelectGoals" Header="1. Select goals" Margin="-2,0,-159.4,-34.8" FontSize="18" FontWeight="Bold" IsEnabled="False" BorderBrush="White" Foreground="Black" Focusable="False" IsSelected="{Binding TabItem_SelectGoals_isSelected}" Background="White">
                 <Grid x:Name="grid_select_Goals" Background="White" Margin="0,33,0,0.2">
-                    <Label x:Name="label" Content="Select gols" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" FontSize="24"/>
+                    <Label x:Name="label" Content="Select lkgols" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" FontSize="24"/>
                     <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="411,182,0,0" VerticalAlignment="Top" Width="236" IsSynchronizedWithCurrentItem="True">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
