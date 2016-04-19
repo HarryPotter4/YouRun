@@ -6,7 +6,11 @@
              xmlns:local="clr-namespace:YouRun_GUI.Views"
              mc:Ignorable="d" 
              d:DesignHeight="309.512" d:DesignWidth="398.78">
-    <Grid Background="#FF1C41A9">
+    <Grid Background="#FFFCFCFC">
+        <StackPanel>
+            <Button/>
+            <Button/>
+        </StackPanel>
 
     </Grid>
 </UserControl>
