@@ -16,6 +16,17 @@ namespace YouRun_GUI
     {
         private CompositionContainer container;
 
+        public AppBootstrapper()
+        {
+            Initialize();
+        }
+
+        protected override void OnStartup(object sender, StartupEventArgs e)
+        {
+            DisplayRootViewFor<MainViewModel>();
+        }
+
+
         protected override void Configure()
         {
             container = new CompositionContainer(new AggregateCatalog(AssemblySource.Instance.Select(x => new AssemblyCatalog(x)).OfType<ComposablePartCatalog>()));

@@ -20,7 +20,7 @@ namespace YouRun_GUI.ViewModels
 
         public void Btn_NewProfile()
         {
-            _windowManager.ShowWindow(new Wizard_ViewModel(_windowManager));
+            var result = _windowManager.ShowDialog(new Wizard_ViewModel());            
         }
         public void Open_Profile()
         {
