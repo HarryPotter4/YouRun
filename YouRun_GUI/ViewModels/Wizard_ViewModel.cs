@@ -18,11 +18,21 @@ namespace YouRun.ViewModels
         private bool _tabItem_SelectGoals_isSelected;
         private bool _CurrentBodyData_isSelected;
         private bool _Individual_Time_isSelected;
+        
 
         private string _AspiredTime;
+        private IWindowManager _windowManager;
 
         public Wizard_ViewModel()
         {
+            TabItem_SelectGoals_isSelected = true;
+            CurrentBodyData_isSelected = false;
+            Individual_Time_isSelected = false;
+        }
+
+        public Wizard_ViewModel(IWindowManager _windowManager)
+        {
+            this._windowManager = _windowManager;
             TabItem_SelectGoals_isSelected = true;
             CurrentBodyData_isSelected = false;
             Individual_Time_isSelected = false;
