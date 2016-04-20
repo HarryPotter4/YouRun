@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouRun_GUI", "YouRun_GUI\Yo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFGenerator", "PDFGenerator\PDFGenerator.csproj", "{8A8AF26D-4140-4796-983C-FB2F3A26346C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{C1837E45-F473-40A4-A654-CFA6D963C7B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests", "Calculator.Tests\Calculator.Tests.csproj", "{20CD60A8-085E-403C-A293-A51CFE7E1AAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{8A8AF26D-4140-4796-983C-FB2F3A26346C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A8AF26D-4140-4796-983C-FB2F3A26346C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A8AF26D-4140-4796-983C-FB2F3A26346C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1837E45-F473-40A4-A654-CFA6D963C7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1837E45-F473-40A4-A654-CFA6D963C7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1837E45-F473-40A4-A654-CFA6D963C7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1837E45-F473-40A4-A654-CFA6D963C7B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
