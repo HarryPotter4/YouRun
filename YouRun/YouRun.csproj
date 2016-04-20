@@ -75,8 +75,8 @@
     <Compile Include="TDD\Calc.cs" />
     <Compile Include="TDD\Calc.Tests.cs" />
     <Compile Include="TDD\CalcOp.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Page Include="Views\MainView.xaml">
+    <Compile Include="ViewModels\Wizard_ViewModel.cs" />
+    <Page Include="Views\Wizard_View.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -85,8 +85,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppBootstrapper.cs" />
-    <Compile Include="Views\MainView.xaml.cs">
-      <DependentUpon>MainView.xaml</DependentUpon>
+    <Compile Include="Views\Wizard_View.xaml.cs">
+      <DependentUpon>Wizard_View.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

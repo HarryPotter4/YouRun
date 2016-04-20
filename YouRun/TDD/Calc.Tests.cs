@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace YouRun.TDD
 {
-    class Calc
+    class Calculator
     {
     }
 }

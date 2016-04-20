@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace YouRun.ViewModels
 {
-    class MainViewModel : Screen
+    class Wizard_ViewModel : Screen
     {
         private string _windowTitle;
         private string _tabControl;
@@ -21,7 +21,7 @@ namespace YouRun.ViewModels
 
         private string _AspiredTime;
 
-        public MainViewModel()
+        public Wizard_ViewModel()
         {
             TabItem_SelectGoals_isSelected = true;
             CurrentBodyData_isSelected = false;
