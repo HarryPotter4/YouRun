@@ -19,7 +19,7 @@ namespace YouRun.ViewModels
         private bool _CurrentBodyData_isSelected;
         private bool _Individual_Time_isSelected;
         
-
+    
         private string _AspiredTime;
         private IWindowManager _windowManager;
 
@@ -36,6 +36,9 @@ namespace YouRun.ViewModels
             TabItem_SelectGoals_isSelected = true;
             CurrentBodyData_isSelected = false;
             Individual_Time_isSelected = false;
+
+            int  i= 0;
+
         }
 
         public string WindowTitle
