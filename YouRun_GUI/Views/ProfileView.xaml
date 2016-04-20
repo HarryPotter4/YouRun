@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="YouRun_GUI.Views.ProfileView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YouRun_GUI.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="309.512" d:DesignWidth="398.78">
+    <Grid Background="White" >
+        <StackPanel Margin="94,71,0,0" HorizontalAlignment="Left" Width="240" Height="98" VerticalAlignment="Top">
+            <Button x:Name="Btn_NewProfile" Content="New Profile" Height="44" Background="#FFFFC0C0" BorderBrush="#FFC2C2C2" BorderThickness="2" Foreground="#FF544848" FontSize="16" FontWeight="Bold"/>
+            <Label Height="10"/>
+            <Button x:Name="Open_Profile" Content="Open Profile" Background="#FFFFC0C0" BorderBrush="#FFC2C2C2" Height="40" BorderThickness="1,2,2,2" Foreground="#FF544848" FontSize="16" FontWeight="Bold" />
+        </StackPanel>
+
+    </Grid>
+</UserControl>

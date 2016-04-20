@@ -1,86 +1,24 @@
 ﻿using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace YouRun_GUI.ViewModels
 {
-    class MainViewModel : Screen
+    class MainViewModel : Conductor<Screen>
     {
+        private StopWatchViewModel stopWatchViewModel;
+        private ChartViewModel chartViewModel;
+
         public MainViewModel()
         {
-           // InitialWindows();
+            ActivateItem(new ProfileViewModel());
         }
 
-        private void InitialWindows()
-        {
-            int temp = (int) MenuWidth / 3;
-            Btn_documentView_Width = temp;
-            Btn_chart_Width = temp;
-            Btn_traingsPlan_Width = temp;
-        }
-
-        private int _MenuWidth;
-        private int _Btn_traingsPlan_Width;
-        private int _Btn_chart_Width;
-        private int _Btn_documentView_Width;
         private string _WindowTitle;
-
-        public int MenuWidth
-        {
-            get
-            {
-                return _MenuWidth;
-            }
-
-            set
-            {
-                _MenuWidth = value;
-                NotifyOfPropertyChange(() => MenuWidth);
-            }
-        }
-        public int Btn_traingsPlan_Width
-        {
-            get
-            {
-                return _Btn_traingsPlan_Width;
-            }
-
-            set
-            {
-                _Btn_traingsPlan_Width = value;
-                NotifyOfPropertyChange(() => Btn_traingsPlan_Width);
-            }
-        }
-        public int Btn_chart_Width
-        {
-            get
-            {
-                return _Btn_chart_Width;
-            }
-
-            set
-            {
-                _Btn_chart_Width = value;
-                NotifyOfPropertyChange(() => Btn_chart_Width);
-            }
-        }
-        public int Btn_documentView_Width
-        {
-            get
-            {
-                return _Btn_documentView_Width;
-            }
-
-            set
-            {
-                _Btn_documentView_Width = value;
-                NotifyOfPropertyChange(() => Btn_documentView_Width);
-            }
-        }
-
         public string WindowTitle
         {
             get
@@ -91,22 +29,49 @@ namespace YouRun_GUI.ViewModels
             set
             {
                 _WindowTitle = value;
-                InitialWindows();
                 NotifyOfPropertyChange(() => WindowTitle);
             }
         }
 
-        public void btn_trainingsPlan()
+       
+        public void Btn_StopWatch()
         {
-            InitialWindows();
+            ActivateItem(new StopWatchViewModel());
+            Debug.Write("Das ist die Stopwatch");
         }
-        public void btn_chart()
+        public void Btn_ChartDiagram()
         {
-            
+            ActivateItem(new ChartViewModel());                              
+            Debug.Write("Das ist das Chartdiagramm");                           
         }
-        public void btn_documentView()
-        {
+        
 
+        public void Btn_PDFDocument()
+        {
+            ActivateItem(new DocumentViewModel());
+            Debug.Write("Das ist die PDFDOCUment");
         }
+        public void Btn_ProfileView()
+        {
+            ActivateItem(new ProfileViewModel());
+        }
+
+        private BindableCollection<object> _listView_Content;
+        public BindableCollection<object> ListView_Content
+        {
+            get
+            {
+                return _listView_Content;
+            }
+
+            set
+            {
+                _listView_Content = value;
+                NotifyOfPropertyChange(() => ListView_Content);
+            }
+        }
+
+
     }
+
 }

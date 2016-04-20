@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace YouRun_GUI.Views
 {
     /// <summary>
-    /// Interaction logic for TrainingsPlan.xaml
+    /// Interaction logic for ProfileView.xaml
     /// </summary>
-    public partial class TrainingsPlan : Window
+    public partial class ProfileView : UserControl
     {
-        public TrainingsPlan()
+        public ProfileView()
         {
             InitializeComponent();
         }

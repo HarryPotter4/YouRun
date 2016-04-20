@@ -11,7 +11,7 @@ namespace PDFGenerator
     {
         static void Main(string[] args)
         {
-            IronPdf.HtmlToPdf.StaticRenderHtmlAsPdf()
+            
         }
     }
 }

@@ -6,20 +6,31 @@
         xmlns:local="clr-namespace:YouRun_GUI"
         mc:Ignorable="d"
         Title="{Binding WindowTitle}" Height="350" Width="525" WindowState="Maximized" MinWidth="525" MinHeight="350" WindowStartupLocation="CenterScreen">
-    <Grid>
-        <WrapPanel Height="150" VerticalAlignment="Top" Margin="0,0,-1.6,0" Orientation="Horizontal" Grid.ColumnSpan="3">
-            <Button x:Name="btn_traininsPlan" Visibility="Visible" Margin="0,0,0,-0.2">Trainingsplan</Button>
-            <Button x:Name="btn_chart" Visibility="Visible" Margin="0,0,0,-0.2">Chart</Button>
-            <Button x:Name="btn_documentView" Content="DocumentView" Margin="0,0,0,-0.2" Visibility="Visible"/>
-        </WrapPanel>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="100" Margin="-1,145,0,0" VerticalAlignment="Top">
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-            <Button/>
-        </Menu>
-        <DocumentViewer x:Name="documentViewer" HorizontalAlignment="Left" Height="1" Margin="87,187,0,0" VerticalAlignment="Top" Width="1"/>
+    <Grid RenderTransformOrigin="0.788,0.291">
+       <StackPanel Orientation="Horizontal" Margin="0,0,0.4,0" Background="#FFFFD6D6" Height="46" VerticalAlignment="Top">           
+            <Button  Width="53" BorderBrush="{x:Null}" Foreground="{x:Null}" x:Name="Btn_ProfileView" Height="44">
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/folder.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button  Width="51" BorderBrush="{x:Null}" Foreground="{x:Null}" x:Name="Btn_StopWatch" Height="45">
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/watchstopp.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button   x:Name="Btn_ChartDiagram" Height="43" Width="44" Foreground="{x:Null}" BorderBrush="{x:Null}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/charts-combo-icon.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="Btn_PDFDocument" Height="44" Width="52" BorderBrush="{x:Null}" Foreground="{x:Null}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/document.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>                  
+               
+        </StackPanel>
+        <ContentControl x:Name="ActiveItem" Margin="0,52,0.4,-0.2" Background="#FFFFA0A0" Foreground="#FFD36666" BorderBrush="#FFB72B2B" OpacityMask="White"/>
 
     </Grid>
 </Window>
