@@ -7,6 +7,7 @@ using Caliburn.Micro;
 using System.Diagnostics;
 using YouRun_GUI.ViewModels;
 using System.Reflection;
+using YouRun_GUI.Model;
 
 namespace YouRun.ViewModels
 {
@@ -194,14 +195,14 @@ namespace YouRun.ViewModels
         }
         public void btn_generate_Workout_Plan()
         {
-            //Generate file and place it under root directory
             filePath = Assembly.GetExecutingAssembly().CodeBase;
+            L_GenerateProfile generateProfile = new L_GenerateProfile();
+
+            generateProfile.Generate(this,filePath);
+            filePath = generateProfile.getfilePath();            
 
             profilViewModel.setPath(filePath);
             this.TryClose();
-
-            //TODO: Store Data in file and save it under...
-            
         }
     }
 }

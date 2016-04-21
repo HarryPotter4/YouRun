@@ -26,7 +26,7 @@ namespace YouRun_GUI.ViewModels
             ActivateItem(new ProfileViewModel(_windowManager));
 
             // Generate views
-            ActivateItem(new ChartViewModel(_windowManager));
+           // ActivateItem(new ChartViewModel(_windowManager));
         }
 
         private string _WindowTitle;
