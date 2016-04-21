@@ -36,9 +36,7 @@ namespace YouRun.ViewModels
             TabItem_SelectGoals_isSelected = true;
             CurrentBodyData_isSelected = false;
             Individual_Time_isSelected = false;
-
-            int  i= 0;
-
+            
         }
 
         public string WindowTitle
