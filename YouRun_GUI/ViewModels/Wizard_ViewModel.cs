@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using System.Diagnostics;
+using YouRun_GUI.ViewModels;
+using System.Reflection;
 
 namespace YouRun.ViewModels
 {
@@ -18,10 +20,12 @@ namespace YouRun.ViewModels
         private bool _tabItem_SelectGoals_isSelected;
         private bool _CurrentBodyData_isSelected;
         private bool _Individual_Time_isSelected;
+        private string filePath;
         
     
         private string _AspiredTime;
         private IWindowManager _windowManager;
+        private ProfileViewModel profilViewModel;
 
         public Wizard_ViewModel()
         {
@@ -35,8 +39,16 @@ namespace YouRun.ViewModels
             this._windowManager = _windowManager;
             TabItem_SelectGoals_isSelected = true;
             CurrentBodyData_isSelected = false;
+            Individual_Time_isSelected = false;            
+        }        
+
+        public Wizard_ViewModel(IWindowManager _windowManager, ProfileViewModel profilViewModel) 
+        {
+            this.profilViewModel = profilViewModel;            
+            this._windowManager = _windowManager;
+            TabItem_SelectGoals_isSelected = true;
+            CurrentBodyData_isSelected = false;
             Individual_Time_isSelected = false;
-            
         }
 
         public string WindowTitle
@@ -182,6 +194,12 @@ namespace YouRun.ViewModels
         }
         public void btn_generate_Workout_Plan()
         {
+            //Generate file and place it under root directory
+            filePath = Assembly.GetExecutingAssembly().CodeBase;
+
+            profilViewModel.setPath(filePath);
+            this.TryClose();
+
             //TODO: Store Data in file and save it under...
             
         }

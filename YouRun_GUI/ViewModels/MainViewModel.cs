@@ -14,6 +14,7 @@ namespace YouRun_GUI.ViewModels
     {
         private StopWatchViewModel stopWatchViewModel;
         private ChartViewModel chartViewModel;
+        private ProfileViewModel profileViewModel;
 
         private readonly IWindowManager _windowManager;
 
@@ -23,6 +24,9 @@ namespace YouRun_GUI.ViewModels
         {
             this._windowManager = windowManager;
             ActivateItem(new ProfileViewModel(_windowManager));
+
+            // Generate views
+            ActivateItem(new ChartViewModel(_windowManager));
         }
 
         private string _WindowTitle;
@@ -48,7 +52,7 @@ namespace YouRun_GUI.ViewModels
         }
         public void Btn_ChartDiagram()
         {
-            ActivateItem(new ChartViewModel());                              
+            ActivateItem(new ChartViewModel(_windowManager));                              
             Debug.Write("Das ist das Chartdiagramm");                           
         }
         
@@ -60,7 +64,8 @@ namespace YouRun_GUI.ViewModels
         }
         public void Btn_ProfileView()
         {
-            ActivateItem(new ProfileViewModel(_windowManager));
+            
+            ActivateItem(profileViewModel = new ProfileViewModel(_windowManager));
         }
 
         private BindableCollection<object> _listView_Content;

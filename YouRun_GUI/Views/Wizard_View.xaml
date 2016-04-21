@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:YouRun_GUI"
         mc:Ignorable="d"
-        Title="{Binding WindowTitle}" Height="720" Width="1024" ResizeMode="NoResize">
-    <Grid Margin="0,0,-0.4,0.4">
-        <TabControl x:Name="TabControl" HorizontalAlignment="Left" Height="690" VerticalAlignment="Top" Width="1018">
-            <TabItem x:Name="TabItem_SelectGoals" Header="1. Select goals" Margin="-2,0,-159.4,-34.8" FontSize="18" FontWeight="Bold" IsEnabled="False" BorderBrush="White" Foreground="Black" Focusable="False" IsSelected="{Binding TabItem_SelectGoals_isSelected}" Background="White">
-                <Grid x:Name="grid_select_Goals" Background="White" Margin="0,33,0,0.2">
-                    <Label x:Name="label" Content="Select lkgols" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" FontSize="24"/>
-                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="411,182,0,0" VerticalAlignment="Top" Width="236" IsSynchronizedWithCurrentItem="True">
+        Title="{Binding WindowTitle}" Height="480" Width="640" ResizeMode="NoResize">
+    <Grid>
+        <TabControl x:Name="TabControl" Margin="0,0,0,0">
+            <TabItem x:Name="TabItem_SelectGoals" Header="1. Select goals"  FontSize="18" FontWeight="Bold" IsEnabled="False" BorderBrush="White" Foreground="Black" Focusable="False" IsSelected="{Binding TabItem_SelectGoals_isSelected}" Background="White" Height="43" VerticalAlignment="Top" Margin="-2,-1,0,0" HorizontalAlignment="Left" Width="200">
+                <Grid x:Name="grid_select_Goals" Background="White" Margin="0,-2,-1,-6.6">
+                    <Label x:Name="label" Content="Select goals" HorizontalAlignment="Left" Margin="85,72,0,0" VerticalAlignment="Top" FontSize="18"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="326,110,0,0" VerticalAlignment="Top" Width="233" IsSynchronizedWithCurrentItem="True" FontSize="14" FontWeight="Normal">
                         <ComboBox.Background>
                             <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                                 <GradientStop Color="#FFF0F0F0" Offset="0"/>
@@ -24,68 +24,91 @@
                         <ComboBoxItem Content="5 km Lauf" FontWeight="Normal"/>
                         <ComboBoxItem Content="Fitnesstraining" FontWeight="Normal"/>
                     </ComboBox>
-                    <DatePicker x:Name="expiredDate" HorizontalAlignment="Left" Margin="411,235,0,0" VerticalAlignment="Top" Width="236" IsTodayHighlighted="False" SelectedDateFormat="Long" FirstDayOfWeek="Monday" Text="DD/MM/YYYY"/>
-                    <TextBox x:Name="AspiredTime" HorizontalAlignment="Left" Height="23" Margin="411,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Text="hh:mm">
+                    <DatePicker x:Name="expiredDate" HorizontalAlignment="Left" Margin="328,146,0,0" VerticalAlignment="Top" Width="232" IsTodayHighlighted="False" SelectedDateFormat="Long" FirstDayOfWeek="Monday" Text="DD/MM/YYYY" FontSize="14" FontWeight="Normal"/>
+                    <TextBox x:Name="AspiredTime" HorizontalAlignment="Left" Height="23" Margin="328,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" Text="hh:mm" FontWeight="Normal" FontSize="14">
                         <TextBox.BindingGroup>
                             <BindingGroup Name="Runningtime"/>
                         </TextBox.BindingGroup>
                     </TextBox>
-                    <Label x:Name="label_Copy1" Content="Select your competition day:" HorizontalAlignment="Left" Margin="172,235,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
-                    <Label x:Name="label_Copy2" Content="Aspired time:" HorizontalAlignment="Left" Margin="172,285,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
-                    <Button x:Name="btn_To_Current_Body_Data" Content="Next" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="832,440,0,0" />
-                    <Label x:Name="label_Copy" Content="Select your goal:" HorizontalAlignment="Left" Margin="172,181,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
+                    <Label x:Name="label_Copy1" Content="Select your competition day:" HorizontalAlignment="Left" Margin="81,147,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal"/>
+                    <Label x:Name="label_Copy2" Content="Aspired time:" HorizontalAlignment="Left" Margin="85,178,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal"/>
+                    <Button x:Name="btn_To_Current_Body_Data" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="499,299,0,0" FontWeight="Normal" Height="65" Foreground="Black" BorderBrush="White" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/arrow_right.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="label_Copy" Content="Select your goal:" HorizontalAlignment="Left" Margin="82,112,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal"/>
 
                 </Grid>
             </TabItem>
-            <TabItem x:Name="CurrentBodyData" IsSelected="{Binding CurrentBodyData_isSelected}"  Header="2. Current body data" Margin="0,0,-165,-34.8" FontSize="18" FontWeight="Bold" IsEnabled="False" BorderBrush="White" HorizontalAlignment="Right" Width="354">
+            <TabItem x:Name="CurrentBodyData" IsSelected="{Binding CurrentBodyData_isSelected}"  Header="2. Current body data"  FontSize="18" FontWeight="Bold" IsEnabled="False" BorderBrush="White" Height="47" VerticalAlignment="Bottom" RenderTransformOrigin="0.709,0.896" HorizontalAlignment="Right" Width="201" Margin="-4,0,4.6,7">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FFF0F0F0" Offset="0"/>
                         <GradientStop Color="White" Offset="1"/>
                     </LinearGradientBrush>
                 </TabItem.Background>
-                <Grid Background="White" Margin="0,33,0,0.2">
-                    <Label x:Name="label2" Content="Select goals" HorizontalAlignment="Left" Margin="172,117,0,0" VerticalAlignment="Top" FontSize="24"/>
-                    <Label x:Name="label3" Content="Select gender:" HorizontalAlignment="Left" Margin="172,182,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
+                <Grid Background="White" Margin="0,1,4,-0.6">
+                    <Label x:Name="label2" Content="Body data" HorizontalAlignment="Left" Margin="58,55,0,0" VerticalAlignment="Top" FontSize="18" Width="185" Height="40"/>
+                    <Label x:Name="label3" Content="Select gender:" HorizontalAlignment="Left" Margin="58,86,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Width="128" Height="32"/>
 
-                    <Label x:Name="label3_Copy1" Content="Number of training per week:" HorizontalAlignment="Left" Margin="172,343,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
-                    <Label x:Name="label3_Copy2" Content="Level of training:" HorizontalAlignment="Left" Margin="172,311,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
-                    <Label x:Name="label3_Copy3" Content="Pace in min/km:" HorizontalAlignment="Left" Margin="172,279,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
-                    <Label x:Name="label3_Copy4" Content="Enter body weight:" HorizontalAlignment="Left" Margin="172,247,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
-                    <Label x:Name="label3_Copy5" Content="Enter body height:" HorizontalAlignment="Left" Margin="172,215,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
-                    <ComboBox x:Name="comboBox_gender" HorizontalAlignment="Left" Margin="417,182,0,0" VerticalAlignment="Top" Width="140" Height="25">
+                    <Label x:Name="label3_Copy1" Content="Number of training per week:" HorizontalAlignment="Left" Margin="55,234,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Width="227" Height="44"/>
+                    <Label x:Name="label3_Copy2" Content="Level of training:" HorizontalAlignment="Left" Margin="56,199,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Width="140" Height="33"/>
+                    <Label x:Name="label3_Copy3" Content="Pace in min/km:" HorizontalAlignment="Left" Margin="57,170,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Width="140" Height="33"/>
+                    <Label x:Name="label3_Copy4" Content="Enter body weight:" HorizontalAlignment="Left" Margin="57,141,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Width="160" Height="36"/>
+                    <Label x:Name="label3_Copy5" Content="Enter body height:" HorizontalAlignment="Left" Margin="57,113,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Normal" Width="133" Height="30"/>
+                    <ComboBox x:Name="comboBox_gender" HorizontalAlignment="Left" Margin="327,87,0,0" VerticalAlignment="Top" Width="128" Height="28" FontSize="14" FontWeight="Normal">
                         <ComboBoxItem Content="Male" FontWeight="Normal" IsSelected="True"/>
                         <ComboBoxItem Content="Female" FontWeight="Normal"/>
                     </ComboBox>
-                    <TextBox x:Name="textBox_bodyHeight" HorizontalAlignment="Left" Height="23" Margin="417,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Normal" FontSize="12"/>
-                    <TextBox x:Name="textBox_bodyWeight" HorizontalAlignment="Left" Height="23" Margin="417,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
-                    <TextBox x:Name="textBox_pace" HorizontalAlignment="Left" Height="23" Margin="417,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
-                    <TextBox x:Name="textBox_Training_Per_Week" HorizontalAlignment="Left" Height="23" Margin="417,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
-                    <ComboBox x:Name="comboBox_trainingLevel" HorizontalAlignment="Left" Margin="417,313,0,0" VerticalAlignment="Top" Width="140">
+                    <TextBox x:Name="textBox_bodyHeight" HorizontalAlignment="Left" Height="19" Margin="328,120,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" FontWeight="Normal" FontSize="12"/>
+                    <TextBox x:Name="textBox_bodyWeight" HorizontalAlignment="Left" Height="18" Margin="327,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+                    <TextBox x:Name="textBox_pace" HorizontalAlignment="Left" Height="18" Margin="327,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+                    <TextBox x:Name="textBox_Training_Per_Week" HorizontalAlignment="Left" Height="20" Margin="327,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126"/>
+                    <ComboBox x:Name="comboBox_trainingLevel" HorizontalAlignment="Left" Margin="328,204,0,0" VerticalAlignment="Top" Width="126" Height="23" FontWeight="Normal" FontSize="14" >
                         <ComboBoxItem Content="Level 1" FontWeight="Normal" IsSelected="True"/>
                         <ComboBoxItem Content="Level 2" FontWeight="Normal"/>
                         <ComboBoxItem Content="Level 3" FontWeight="Normal"/>
                         <ComboBoxItem Content="Level 4" FontWeight="Normal"/>
                         <ComboBoxItem Content="Level 5" FontWeight="Normal"/>
                     </ComboBox>
-                    <Button x:Name="btn_To_Individual" Content="Next" HorizontalAlignment="Left" Margin="842,477,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="btn_Back_To_Goals" Content="Back" HorizontalAlignment="Left" Margin="737,477,0,0" VerticalAlignment="Top" Width="75" />
+                    <Button x:Name="btn_To_Individual" Content="" HorizontalAlignment="Left" Margin="501,296,0,0" VerticalAlignment="Top" Width="81" Height="65" BorderBrush="White">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/arrow_right.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btn_Back_To_Goals" Content="" HorizontalAlignment="Left" Margin="385,295,0,0" VerticalAlignment="Top" Width="101" Height="61" BorderBrush="White" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/arrow_left.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="Individual_Time" IsSelected="{Binding Individual_Time_isSelected}" Header="3. Individual time management" Margin="163.8,0,-226,-34.8" FontSize="18" FontWeight="Bold" IsEnabled="False">
+            <TabItem x:Name="Individual_Time" IsSelected="{Binding Individual_Time_isSelected}" Header="3. Time management"  FontSize="18" FontWeight="Bold" IsEnabled="False" HorizontalAlignment="Right" Width="215" Height="51" VerticalAlignment="Bottom" Margin="0,0,-4.2,5">
                 <Grid Background="White" Margin="0,33,0,0.2">
-                    <CheckBox x:Name="checkBox_Monday" Content="Monday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,177,0,0" Background="White" FontWeight="Normal"/>
-                    <CheckBox x:Name="checkBox_Sunday" Content="Sunday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,345,0,0" Background="White" FontWeight="Normal"/>
-                    <CheckBox x:Name="checkBox_Saturday" Content="Saturday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,317,0,0" Background="White" FontWeight="Normal"/>
-                    <CheckBox x:Name="checkBox_Friday" Content="Friday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,289,0,0" Background="White" FontWeight="Normal"/>
-                    <CheckBox x:Name="checkBox_Thursday" Content="Thursday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,261,0,0" Background="White" FontWeight="Normal"/>
-                    <CheckBox x:Name="checkBox_Wednesday" Content="Wednesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,233,0,0" Background="White" FontWeight="Normal"/>
-                    <CheckBox x:Name="checkBox_Thuesday" Content="Thuesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="137,205,0,0" Background="White" FontWeight="Normal"/>
-                    <Label x:Name="label1" Content="Individual time management" HorizontalAlignment="Left" Margin="137,132,0,0" VerticalAlignment="Top"/>
-                    <Button x:Name="btn_generate_Workout_Plan" Content="Generate workout plan" HorizontalAlignment="Left" Margin="762,488,0,0" VerticalAlignment="Top" Width="215" Height="33"/>
-                    <Button x:Name="btn_back_To_Body_Data" Content="Back" HorizontalAlignment="Left" Margin="652,490,0,0" VerticalAlignment="Top" Width="75" Height="31" />
+                    <CheckBox x:Name="checkBox_Monday" Content="Monday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,73,0,0" Background="White" FontWeight="Normal" Height="25" Width="132" FontSize="14"/>
+                    <CheckBox x:Name="checkBox_Sunday" Content="Sunday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,230,0,0" Background="White" FontWeight="Normal" Height="28" Width="119" FontSize="14"/>
+                    <CheckBox x:Name="checkBox_Saturday" Content="Saturday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,205,0,0" Background="White" FontWeight="Normal" Height="26" Width="137" FontSize="14"/>
+                    <CheckBox x:Name="checkBox_Friday" Content="Friday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,179,0,0" Background="White" FontWeight="Normal" Height="25" Width="103" FontSize="14"/>
+                    <CheckBox x:Name="checkBox_Thursday" Content="Thursday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,153,0,0" Background="White" FontWeight="Normal" Height="25" Width="142" FontSize="14"/>
+                    <CheckBox x:Name="checkBox_Wednesday" Content="Wednesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,124,0,0" Background="White" FontWeight="Normal" Height="26" Width="171" FontSize="14"/>
+                    <CheckBox x:Name="checkBox_Thuesday" Content="Thuesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="59,97,0,0" Background="White" FontWeight="Normal" Height="25" Width="148" FontSize="14"/>
+                    <Label x:Name="label1" Content="Individual time management" HorizontalAlignment="Left" Margin="54,32,0,0" VerticalAlignment="Top" Height="41" Width="253"/>
+                    <Button x:Name="btn_generate_Workout_Plan" Content="" HorizontalAlignment="Left" Margin="487,255,0,0" VerticalAlignment="Top" Width="83" Height="60" BorderBrush="White">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/generate.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btn_back_To_Body_Data" Content="" HorizontalAlignment="Left" Margin="393,262,0,0" VerticalAlignment="Top" Width="70" Height="61" BorderBrush="White" >
+                        <Button.Background>
+                            <ImageBrush ImageSource="/YouRun_GUI;component/Pictures/arrow_left.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="label4" HorizontalAlignment="Left" Margin="492,308,0,0" VerticalAlignment="Top" Height="28" Width="79" Content="Generate" FontWeight="Bold" FontSize="14"/>
+
                 </Grid>
             </TabItem>
+
         </TabControl>
     </Grid>
 </Window>

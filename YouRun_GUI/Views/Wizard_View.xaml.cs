@@ -24,6 +24,8 @@ namespace YouRun.Views
         public Wizard_View()
         {
             InitializeComponent();
-        }                
+        }
+
+       
     }
 }
