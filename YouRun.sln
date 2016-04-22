@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFGenerator", "PDFGenerato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{C1837E45-F473-40A4-A654-CFA6D963C7B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Tests", "Calculator.Tests\Calculator.Tests.csproj", "{20CD60A8-085E-403C-A293-A51CFE7E1AAD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.NUnitTest", "Calculator.NUnitTest\Calculator.NUnitTest.csproj", "{41EC67BB-8047-4C92-9C1D-0AAC7352102D}"
 EndProject
 Global
@@ -37,10 +35,6 @@ Global
 		{C1837E45-F473-40A4-A654-CFA6D963C7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1837E45-F473-40A4-A654-CFA6D963C7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1837E45-F473-40A4-A654-CFA6D963C7B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{20CD60A8-085E-403C-A293-A51CFE7E1AAD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{41EC67BB-8047-4C92-9C1D-0AAC7352102D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{41EC67BB-8047-4C92-9C1D-0AAC7352102D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41EC67BB-8047-4C92-9C1D-0AAC7352102D}.Release|Any CPU.ActiveCfg = Release|Any CPU
