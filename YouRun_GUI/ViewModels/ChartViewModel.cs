@@ -10,7 +10,11 @@ namespace YouRun_GUI.ViewModels
 {
     class ChartViewModel : Screen
     {
-        
+        private IWindowManager _windowManager;
 
+        public ChartViewModel(IWindowManager _windowManager)
+        {
+            this._windowManager = _windowManager;
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,24 @@ using System.Threading.Tasks;
 
 namespace YouRun_GUI.ViewModels
 {
+    [Export(typeof(MainViewModel))]
     class MainViewModel : Conductor<Screen>
     {
         private StopWatchViewModel stopWatchViewModel;
         private ChartViewModel chartViewModel;
+        private ProfileViewModel profileViewModel;
 
-        public MainViewModel()
+        private readonly IWindowManager _windowManager;
+
+
+        [ImportingConstructor]
+        public MainViewModel(IWindowManager windowManager)
         {
-            ActivateItem(new ProfileViewModel());
+            this._windowManager = windowManager;
+            ActivateItem(new ProfileViewModel(_windowManager));
+
+            // Generate views
+           // ActivateItem(new ChartViewModel(_windowManager));
         }
 
         private string _WindowTitle;
@@ -41,7 +52,7 @@ namespace YouRun_GUI.ViewModels
         }
         public void Btn_ChartDiagram()
         {
-            ActivateItem(new ChartViewModel());                              
+            ActivateItem(new ChartViewModel(_windowManager));                              
             Debug.Write("Das ist das Chartdiagramm");                           
         }
         
@@ -53,7 +64,8 @@ namespace YouRun_GUI.ViewModels
         }
         public void Btn_ProfileView()
         {
-            ActivateItem(new ProfileViewModel());
+            
+            ActivateItem(profileViewModel = new ProfileViewModel(_windowManager));
         }
 
         private BindableCollection<object> _listView_Content;

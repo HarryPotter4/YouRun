@@ -18,7 +18,7 @@ namespace YouRun
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
-            DisplayRootViewFor<MainViewModel>();
+            DisplayRootViewFor<Wizard_ViewModel>();
         }
     }
 }
