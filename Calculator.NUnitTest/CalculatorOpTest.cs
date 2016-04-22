@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
-namespace Calculator.Tests
+namespace Calculator.NUnitTest
 {
-    [TestClass]
-    class CalculatorOpTest
+    [TestFixture]
+    public class CalculatorOpTest
     {
-        [TestMethod]
+        [Test]
         public void ShouldAddReturnNineWhenPassFiveAndFour()
         {
             //Arrange
@@ -18,10 +18,10 @@ namespace Calculator.Tests
             //Act
             int result = sut.add(5, 4);
             //Assert
-            Assert.AreEqual(9, result);
+            Assert.That(result, Is.EqualTo(9));
         }
 
-            [TestMethod]
+        [Test]
         public void ShouldMulReturnTwentyWhenPassFiveAndFour()
         {
             //Arrange
@@ -29,7 +29,7 @@ namespace Calculator.Tests
             //Act
             int result = sut.mul(5, 4);
             //Assert
-            Assert.AreEqual(20, result);
+            Assert.That(result, Is.EqualTo(20));
 
         }
     }
