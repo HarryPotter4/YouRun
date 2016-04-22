@@ -72,9 +72,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\TrainingGenerator.cs" />
-    <Compile Include="TDD\Calc.cs" />
-    <Compile Include="TDD\Calc.Tests.cs" />
-    <Compile Include="TDD\CalcOp.cs" />
+    <Compile Include="TestFolder\Class1.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Page Include="Views\MainView.xaml">
       <Generator>MSBuild:Compile</Generator>

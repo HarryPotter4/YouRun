@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YouRun.TDD
+namespace YouRun.TestFolder
 {
-    class Calc
+    class Class1
     {
+        int i = 0;
     }
 }
