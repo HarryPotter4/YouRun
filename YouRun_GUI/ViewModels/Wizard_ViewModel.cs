@@ -196,7 +196,7 @@ namespace YouRun.ViewModels
         public void btn_generate_Workout_Plan()
         {
             filePath = Assembly.GetExecutingAssembly().CodeBase;
-            L_GenerateProfile generateProfile = new L_GenerateProfile();
+            L_GenerateProfil generateProfile = new L_GenerateProfil();
 
             generateProfile.Generate(this,filePath);
             filePath = generateProfile.getfilePath();            

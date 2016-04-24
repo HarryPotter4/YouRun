@@ -73,7 +73,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
-    <Compile Include="Model\L_GenerateProfile.cs" />
+    <Compile Include="Model\Constants.cs" />
+    <Compile Include="Model\L_GenerateProfil.cs" />
     <Compile Include="ViewModels\ChartViewModel.cs" />
     <Compile Include="ViewModels\DocumentViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
