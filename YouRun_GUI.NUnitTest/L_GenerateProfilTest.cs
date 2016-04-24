@@ -16,11 +16,14 @@ namespace YouRun_GUI.NUnitTest
 
         public void ichTrainiereNun22KmMehrProWoche()
         {
-                        YouRun_GUI.Model.L_GenerateProfil testObj = new YouRun_GUI.Model.L_GenerateProfil();
-
-
-
-            
+            //Arrange
+            YouRun_GUI.Model.L_GenerateProfil testObj = new YouRun_GUI.Model.L_GenerateProfil();
+            //Act
+            testObj.calcTimeForSleep(22);
+            //Assert 
+            Assert.That(testObj.AdditionalDailySleep, Is.EqualTo(60));
         }
+
+        //[Test]
     }
 }
