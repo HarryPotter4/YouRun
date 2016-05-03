@@ -1,6 +1,4 @@
 language: csharp
 solution: YouRun.sln
-install:
-  - sudo apt-get install -y gtk sharp2
-  - nuget restore solution YouRun.sln
+
   
