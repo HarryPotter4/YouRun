@@ -46,7 +46,9 @@ namespace YouRun_GUI.Model
             }
         }
 
-        public void calcTimeForSleep(int additionalWeeklyDistance)
+        //range is up to 40 km per week
+        //Test implemented
+        public void calcTimeForSleep(int additionalWeeklyDistance) 
         {
             if (additionalWeeklyDistance>=10&&additionalWeeklyDistance<20)
             {
@@ -66,6 +68,17 @@ namespace YouRun_GUI.Model
             }
 
         }
+        //Test implemented
+        public double calcTimeForMarathonBasedOn5Km(double time)
+        {
+            return time*9.798;
+        }
+        //Test implemented
+        public double calcTimeForMarathonBasedOn10Km(double time)
+        {
+            return time * 4.667;
+        }
+
 
 
     }

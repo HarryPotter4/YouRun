@@ -24,6 +24,34 @@ namespace YouRun_GUI.NUnitTest
             Assert.That(testObj.AdditionalDailySleep, Is.EqualTo(60));
         }
 
-        //[Test]
+        
+
+        [Test]
+
+        public void TestFuer5KmLauf()
+        {
+            //Arrange
+            YouRun_GUI.Model.L_GenerateProfil testObj = new YouRun_GUI.Model.L_GenerateProfil();
+            //Act
+            double zeit=testObj.calcTimeForMarathonBasedOn5Km(20);
+            //Assert 
+            Assert.That(zeit, Is.EqualTo(195.96));
+        }
+
+        [Test]
+
+        public void TestFuer10KmLauf()
+        {
+            //Arrange
+            YouRun_GUI.Model.L_GenerateProfil testObj = new YouRun_GUI.Model.L_GenerateProfil();
+            //Act
+            double zeit = testObj.calcTimeForMarathonBasedOn10Km(60);
+            //Assert 
+            Assert.That(zeit, Is.EqualTo(280.02));
+        }
+
+
     }
+
+    
 }
