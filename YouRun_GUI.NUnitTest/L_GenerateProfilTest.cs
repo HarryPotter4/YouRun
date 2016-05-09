@@ -17,7 +17,7 @@ namespace YouRun_GUI.NUnitTest
         public void ichTrainiereNun22KmMehrProWoche()
         {
             //Arrange
-            YouRun_GUI.Model.L_GenerateProfil testObj = new YouRun_GUI.Model.L_GenerateProfil();
+            var testObj = new YouRun_GUI.Model.L_GenerateProfil();
             //Act
             testObj.calcTimeForSleep(22);
             //Assert 
@@ -31,7 +31,7 @@ namespace YouRun_GUI.NUnitTest
         public void TestFuer5KmLauf()
         {
             //Arrange
-            YouRun_GUI.Model.L_GenerateProfil testObj = new YouRun_GUI.Model.L_GenerateProfil();
+            var testObj = new YouRun_GUI.Model.L_GenerateProfil();
             //Act
             double zeit=testObj.calcTimeForMarathonBasedOn5Km(20);
             //Assert 
@@ -43,7 +43,7 @@ namespace YouRun_GUI.NUnitTest
         public void TestFuer10KmLauf()
         {
             //Arrange
-            YouRun_GUI.Model.L_GenerateProfil testObj = new YouRun_GUI.Model.L_GenerateProfil();
+            var testObj = new YouRun_GUI.Model.L_GenerateProfil();
             //Act
             double zeit = testObj.calcTimeForMarathonBasedOn10Km(60);
             //Assert 

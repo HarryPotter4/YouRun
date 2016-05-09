@@ -13,10 +13,7 @@ namespace YouRun_GUI.Model
         public double genderFactor = 0;
         int AdditionalWeeklyDistance = 0;
         public int AdditionalDailySleep = 0;
-
-
-
-
+        public double size = 0;
 
         private Wizard_ViewModel data;
         private string filePath;
@@ -78,6 +75,12 @@ namespace YouRun_GUI.Model
         {
             return time * 4.667;
         }
+
+        
+            
+        
+
+      
 
 
 
